@@ -1,24 +1,31 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import MenuBar from "./Components/MenuBar/MenuBar";
+import { Layout, Menu, Breadcrumb } from 'antd';
+import HeaderBar from "./Components/Header/HeaderBar";
+import HomePage from "./Pages/HomePage/HomePage";
+
+
+const { Header, Content, Sider, Footer } = Layout;
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Layout>
+          <Header>
+              <HeaderBar></HeaderBar>
+          </Header>
+          <Layout>
+              <Sider width={250}>
+                  <MenuBar></MenuBar>
+              </Sider>
+              <Content>
+                  <HomePage/>
+              </Content>
+          </Layout>
+          <Footer></Footer>
+      </Layout>
     </div>
   );
 }
