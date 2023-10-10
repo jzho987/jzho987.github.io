@@ -6,7 +6,7 @@ import digitalTwinImage from "../../../Images/digitalTwinImage.png";
 
 export default function CodePortfolio() {
     return(
-        <Box marginTop={7}>
+        <Box marginTop={5}>
             <InAnimation orderIndex={1}>
                 <Typography variant={"h4"} align={"left"} >
                     Highlights

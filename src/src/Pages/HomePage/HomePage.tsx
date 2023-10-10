@@ -1,6 +1,7 @@
 import {Box, Grid, Grow, Typography} from "@mui/material";
 import CodePortfolio from "./Components/CodePortfolio";
 import Introduction from "./Components/Introduction";
+import CareerHistory from "./Components/CareerHistory";
 
 export default function HomePage() {
     return(
@@ -11,6 +12,7 @@ export default function HomePage() {
             padding={9}
         >
             <Introduction/>
+            <CareerHistory/>
             <CodePortfolio/>
         </Box>
 
