@@ -1,6 +1,7 @@
 
 import AppBar from '@mui/material/AppBar';
 import {Avatar, Box, Container, IconButton, Menu, Toolbar, Tooltip, Typography} from "@mui/material";
+import {deepPurple} from "@mui/material/colors";
 
 export default function MenuBar() {
 
@@ -10,7 +11,7 @@ export default function MenuBar() {
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
                         <Box sx={{ flexGrow: 0 }}>
-                            <Tooltip title="About">
+                            <Tooltip title="about">
                                 <IconButton onClick={() => {}} sx={{ p: 0 }}>
                                     <Avatar alt="Jay Zhou" src="/static/images/avatar/2.jpg" />
                                 </IconButton>
