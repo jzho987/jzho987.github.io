@@ -1,20 +1,16 @@
 import {Box, Button, Grow, Typography} from "@mui/material";
+import InAnimation from "../Animation/InAnimation";
 
 interface Props {
     Title?: string,
     content?: string,
     Height?: number,
+    AnimationIndex?: number,
 }
 
 export default function blocks(props: Props) {
     return(
-        //display={"block"} justifyItems={"left"} boxShadow={5} padding={2} width={"fit-content"}
-
-        <Grow
-            in={true}
-            style={{ transformOrigin: '0 0 0' }}
-            {...{timeout: 2500}}
-        >
+        <InAnimation orderIndex={props.AnimationIndex ?? 0}>
             <Button sx={{
                 display: "block",
                 justifyItems: "left",
@@ -34,6 +30,6 @@ export default function blocks(props: Props) {
                     </Typography>
                 }
             </Button>
-        </Grow>
+        </InAnimation>
     )
 }
