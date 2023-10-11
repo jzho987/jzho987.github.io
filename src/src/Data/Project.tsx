@@ -18,6 +18,7 @@ export const Projects: Project[] = [
             "binary files for anyone interested to give it a try!",
         associatedLink: "",
         imageSrc: virtualPetGameImage,
+        githubUrl: "https://github.com/se702-cs706/virtual-pet-game-se702cs705"
     },
     {
         projectId: "2c92e82e-b497-4a35-a04e-1fc84bec7a71",

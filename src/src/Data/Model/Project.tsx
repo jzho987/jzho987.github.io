@@ -5,4 +5,5 @@ export interface Project {
     shortDescription: string,
     fullDescription: string,
     associatedLink: string,
+    githubUrl?: string,
 }

@@ -48,6 +48,8 @@ export default function DetailedPortfolioPage() {
             <PortfolioPage Title={project?.title}
                            Description={project?.fullDescription}
                            ImageSrc={project?.imageSrc}
+                           gitUrl={project?.githubUrl}
+                           website={project?.associatedLink}
             />
             <CodePortfolio/>
         </Box>
