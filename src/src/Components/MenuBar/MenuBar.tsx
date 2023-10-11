@@ -1,25 +1,31 @@
 
 import AppBar from '@mui/material/AppBar';
-import {Avatar, Box, Container, IconButton, Menu, Toolbar, Tooltip, Typography} from "@mui/material";
-import {deepPurple} from "@mui/material/colors";
+import {Avatar, Box, Button, Container, IconButton, Menu, Toolbar, Tooltip, Typography} from "@mui/material";
 
 export default function MenuBar() {
 
     return(
-        <div>
-            <AppBar position="static">
-                <Container maxWidth="xl">
-                    <Toolbar disableGutters>
-                        <Box sx={{ flexGrow: 0 }}>
-                            <Tooltip title="about">
-                                <IconButton onClick={() => {}} sx={{ p: 0 }}>
-                                    <Avatar alt="Jay Zhou" src="/static/images/avatar/2.jpg" />
-                                </IconButton>
-                            </Tooltip>
-                        </Box>
-                    </Toolbar>
-                </Container>
-            </AppBar>
-        </div>
+        <AppBar position="static">
+            <Toolbar disableGutters>
+                <Box paddingLeft={16} display={"flex"} gap={4}>
+                    <Button href={"/Home"}>
+                        <Typography color={"white"} variant={"h2"}>
+                            Home
+                        </Typography>
+                    </Button>
+                    <Button href={"/Home"}>
+                        <Typography color={"white"} variant={"h2"}>
+                            About
+                        </Typography>
+                    </Button><Button href={"/Home"}>
+                    <Button href={"/Home"}>
+                        <Typography color={"white"} variant={"h2"}>
+                            Portfolio
+                        </Typography>
+                    </Button>
+                </Button>
+                </Box>
+            </Toolbar>
+        </AppBar>
     )
 }

@@ -44,7 +44,7 @@ export default function DetailedPortfolioPage() {
     },[projectId])
 
     return(
-        <Box display={"block"} paddingLeft={9} paddingRight={9} paddingTop={4}>
+        <Box display={"block"} paddingLeft={9} paddingRight={9} paddingTop={4} paddingBottom={4}>
             <PortfolioPage Title={project?.title}
                            Description={project?.fullDescription}
                            ImageSrc={project?.imageSrc}

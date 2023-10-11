@@ -1,8 +1,6 @@
 import {Box, Typography} from "@mui/material";
 import InAnimation from "../../../Components/Animation/InAnimation";
 import Blocks from "../../../Components/Blocks/Blocks";
-import virtualPetGameImage from "../../../Images/virtualPetGameImage.png";
-import digitalTwinImage from "../../../Images/digitalTwinImage.png";
 import {Projects} from "../../../Data/Project";
 
 export default function CodePortfolio() {
