@@ -2,13 +2,17 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import MenuBar from "./Components/MenuBar/MenuBar";
-import HomePage from "./Pages/HomePage/HomePage";
+import {ThemeProvider} from "@mui/material";
+import {GlobalTheme} from "./Theme/GlobalTheme";
+import Routing from "./Pages/Navigation/Routing";
 
 function App() {
   return (
     <div className="App">
-      <MenuBar/>
-      <HomePage/>
+        <ThemeProvider theme={GlobalTheme}>
+            <MenuBar/>
+            <Routing/>
+        </ThemeProvider>
     </div>
   );
 }

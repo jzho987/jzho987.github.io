@@ -6,11 +6,11 @@ export default function CareerHistory() {
     return(
         <Box marginTop={5}>
             <InAnimation orderIndex={1}>
-                <Typography variant={"h4"} align={"left"} >
+                <Typography variant={"h1"} align={"left"} >
                     Career History
                 </Typography>
             </InAnimation>
-            <Box display={"flex"} marginTop={2} gap={3}>
+            <Box display={"flex"} marginTop={2} gap={7}>
                 <CareerBlocks StartingYear={2022} EndingYear={2023}
                               JobTitle={"Product Engineering Intern"} Company={"Tidy International"}
                               AnimationOrder={2}

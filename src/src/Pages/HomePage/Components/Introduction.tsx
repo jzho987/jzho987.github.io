@@ -5,7 +5,7 @@ export default function Introduction() {
     return(
         <Box>
             <InAnimation orderIndex={1}>
-                <Typography variant={"h4"} align={"left"} >
+                <Typography variant={"h1"} align={"left"} >
                     About Me
                 </Typography>
             </InAnimation>

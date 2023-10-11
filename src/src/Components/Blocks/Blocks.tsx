@@ -1,6 +1,7 @@
 import {Box, Button, Typography} from "@mui/material";
 import InAnimation from "../Animation/InAnimation";
 import {useState} from "react";
+import Image from "../Image/Image";
 
 interface Props {
     Title?: string,
@@ -8,6 +9,7 @@ interface Props {
     Height?: number,
     AnimationIndex?: number,
     onClick?: () => {},
+    href?: string,
     ImageSrc?: string,
 }
 
@@ -24,9 +26,12 @@ export default function blocks(props: Props) {
                 borderRadius: 0,
                 color: "black",
                 background: "white",
-            }} onClick={props.onClick}>
-                <img src={props.ImageSrc ?? `https://picsum.photos/400/${props.Height ?? 300}`} alt="random image" height={props.Height}/>
-                <Typography align={"left"} marginTop={1} variant={"h5"}>
+            }}
+                    onClick={props.onClick}
+                    href={props.href}
+            >
+                <Image ImageSrc={props.ImageSrc} Height={props.Height}/>
+                <Typography align={"left"} marginTop={1} variant={"h2"}>
                     {props.Title ?? "New Item"}
                 </Typography>
                 {
