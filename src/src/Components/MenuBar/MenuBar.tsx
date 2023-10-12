@@ -13,7 +13,7 @@ export default function MenuBar() {
                             Home
                         </Typography>
                     </Button>
-                    <Button href={"/Home"}>
+                    <Button href={"/About"}>
                         <Typography color={"white"} variant={"h2"}>
                             About
                         </Typography>
