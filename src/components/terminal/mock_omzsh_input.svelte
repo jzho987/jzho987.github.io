@@ -5,16 +5,26 @@
         name: string,
         user: string,
         dir: string,
+        active: boolean,
     };
-    export let input: string;
+    export let cmdHistory: string[][] = [];
+    export let input: string = "";
     let name = props.name;
     let user = props.user;
     let dir = props.dir;
+    let active = props.active;
 
-    export const onSubmit = (event: HTMLFormElement | SubmitEvent) => {
-        let out = webShell.invoke(input)
+    const onSubmit = (event: HTMLFormElement | SubmitEvent) => {
+        if (input == "clear") {
+            cmdHistory = []
+            input = ""
+            return
+        }
+
+        let out = webShell.invoke(input) ?? ""
         console.log(out)
-        input = ''
+        cmdHistory = [...cmdHistory, [input, out]]
+        input = ""
     }
 </script>
 
@@ -30,6 +40,7 @@
         <p>$ &nbsp</p>
         <form on:submit|preventDefault={onSubmit}>
             <input class="bg-red-100 bg-opacity-0 outline-none"
+                disabled={!active}
                 bind:value={input}
                 />
         </form>
