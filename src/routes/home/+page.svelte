@@ -10,9 +10,11 @@
 	</div>
 	<div class="flex flex-1">
 		<Terminal 
-			user="jayzhou"
-			name="JayZhou-Website"
-			dir="~/Desktop"
+			props={{
+				user: "jayzhou",
+				name: "JayZhou-Website",
+				dir: "~/Desktop",
+			}}
 		/>
 	</div>
 </div>

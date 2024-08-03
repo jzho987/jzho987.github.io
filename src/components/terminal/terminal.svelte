@@ -1,9 +1,16 @@
 <script lang="ts">
 	import MockMacActionButtons from "./mock_mac_action_buttons.svelte";
+	import MockOmzshInput from "./mock_omzsh_input.svelte";
 
-    export let name;
-    export let user;
-    export let dir;
+    export let props: {
+        name: string,
+        user: string,
+        dir: string,
+    };
+    export let input = "";
+    let name = props.name;
+    let user = props.user;
+    let dir = props.dir;
 </script>
 
 <div class="flex flex-col flex-1">
@@ -14,6 +21,13 @@
         </div>
     </div>
     <div class="flex-1 rounded-b-lg bg-stone-800 p-3">
-        <p class="text-sm font-extralight text-stone-300">{user} at {name} in {dir}</p>
+        <MockOmzshInput
+			props={{
+				user: user,
+				name: name,
+				dir: dir,
+			}}
+        />
+        {input}
     </div>
 </div>
