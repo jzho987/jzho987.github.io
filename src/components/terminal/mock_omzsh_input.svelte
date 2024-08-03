@@ -1,5 +1,5 @@
 <script lang="ts">
-    import WebShell from "./web_shell";
+    import webShell from "./web_shell";
 
     export let props: {
         name: string,
@@ -12,7 +12,7 @@
     let dir = props.dir;
 
     export const onSubmit = (event: HTMLFormElement | SubmitEvent) => {
-        let out = WebShell.invoke(input)
+        let out = webShell.invoke(input)
         console.log(out)
         input = ''
     }
