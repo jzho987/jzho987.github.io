@@ -1,6 +1,6 @@
 export const files = new Map<string, string>([
     ["README.md", `
-        # Web Shell
+        # Web Shell \n
         
         Web shell is a mock shell.
         It can perform certain shell-like commands,

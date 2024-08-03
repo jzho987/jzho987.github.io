@@ -1,6 +1,6 @@
 <script lang="ts">
 	import MockMacActionButtons from "./mock_mac_action_buttons.svelte";
-	import MockOmzshInput from "./mock_omzsh_input.svelte";
+	import WebShellPrompt from "./web_shell_prompt.svelte";
 
     export let props: {
         name: string,
@@ -24,20 +24,21 @@
             <p class="text-sm text-gray-800">{user}@{name}:{dir}</p>
         </div>
     </div>
-    <div class="flex-1 rounded-b-lg bg-stone-800 p-3">
+    <div class="flex flex-col flex-1 rounded-b-lg bg-stone-800 p-3">
         {#each cmdHistory as cmd}
-            <MockOmzshInput
+            <WebShellPrompt
                 props={{
                     user: user,
                     name: name,
                     dir: dir,
-                    active: true,
+                    active: false,
                 }}
                 input={cmd[0]}
             />
-            <p class="flex flex-row text-sm font-extralight text-stone-300">{cmd[1]}</p>
+            <p class="text-sm font-extralight text-stone-300">{cmd[1]}</p>
+            <p class="text-sm text-stone-300">&nbsp</p>
         {/each}
-        <MockOmzshInput
+        <WebShellPrompt
 			props={{
 				user: user,
 				name: name,
