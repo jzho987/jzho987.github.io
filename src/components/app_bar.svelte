@@ -1,7 +1,13 @@
-<script>
+<script lang="ts">
+	import { redirect } from "@sveltejs/kit";
     import self from "../assets/self.webp";
 	import ButtonStyled from "./button_styled.svelte";
 	import DivideLine from "./divide_line.svelte";
+	import { goto } from "$app/navigation";
+
+    export const handleGoToPage = (route: string) => {
+        goto(route);
+    }
 </script>
 
 <div class="bg-zinc-500 h-screen w-36 p-3">
@@ -11,10 +17,19 @@
         />
     </div>
     <div class="flex flex-row flex-col">
-        <ButtonStyled text={"home"}/>
+        <ButtonStyled props={{
+            text: "home",
+            onClick: () => {handleGoToPage("/home")},
+        }}/>
         <DivideLine />
-        <ButtonStyled text={"project"}/>
+        <ButtonStyled props={{
+            text: "projects",
+            onClick: () => {handleGoToPage("/projects")},
+        }}/>
         <DivideLine />
-        <ButtonStyled text={"contact"}/>
+        <ButtonStyled props={{
+            text: "blog",
+            onClick: () => {handleGoToPage("/blog")},
+        }}/>
     </div>
 </div>
