@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { redirect } from "@sveltejs/kit";
     import self from "../assets/self.webp";
 	import ButtonStyled from "./button_styled.svelte";
 	import DivideLine from "./divide_line.svelte";
@@ -16,7 +15,7 @@
             class="rounded-md"
         />
     </div>
-    <div class="flex flex-row flex-col">
+    <div class="flex flex-col">
         <ButtonStyled props={{
             text: "home",
             onClick: () => {handleGoToPage("/home")},

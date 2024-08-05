@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { colors } from "../style/colors";
+
     export let props: {
         text: string,
         onClick: () => void,
@@ -9,7 +11,7 @@
     } = props;
 </script>
 
-<button class="justify-center transition-all duration-100 hover:bg-gray-700 flex flex-1 p-1 rounded text-stone-200 text-xl font-extralight"
+<button class={`w-full justify-center transition-all duration-100 bg-zinc-500 hover:bg-gray-700 flex flex-1 p-1 rounded text-stone-200 text-xl font-extralight`}
     on:click={onClick}>
     {text}
 </button>

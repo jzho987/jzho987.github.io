@@ -26,13 +26,11 @@
 			text: aboutMe,
 		}}/>
 		<div class="flex flex-row mt-8 gap-4 h-40">
-			<Card Class="grow"
-				props={{
+			<Card props={{
 					title: "post graduate",
 					text: postGraduate,
 			}}/>
-			<Card Class="grow"
-				props={{
+			<Card props={{
 					title: "under graduate",
 					text: underGraduate,
 			}}/>

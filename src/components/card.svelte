@@ -1,6 +1,4 @@
 <script lang="ts">
-	import DivideLine from "./divide_line.svelte";
-
     export let props: {
         title: string,
         text: string,
